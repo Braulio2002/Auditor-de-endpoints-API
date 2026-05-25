@@ -1,0 +1,35 @@
+[project]
+name = "api_endpoint_auditor"
+version = "1.0.0"
+description = "A clean architecture defensive API endpoint auditor aligned with OWASP security guidelines."
+authors = [
+    { name = "Braulio" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.0.0",
+    "openpyxl>=3.1.0",
+    "httpx>=0.24.0"
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort
+    "B",    # flake8-bugbear
+    "C4",   # flake8-comprehensions
+    "UP",   # pyupgrade
+    "ARG",  # flake8-unused-arguments
+]
+ignore = ["E501", "ARG002", "B007", "B904", "UP042"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+pythonpath = ["."]

@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+ENV/
+env/
+
+# Excel & Output reports
+datos_salida/*
+!datos_salida/.gitkeep
+
+# IDE configs
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
